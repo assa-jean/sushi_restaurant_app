@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_restaurant_app/components/button.dart';
+import 'package:sushi_restaurant_app/theme/colors.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -23,22 +25,32 @@ class _MenuPageState extends State<MenuPage> {
       ),
       body: Column(
         children: [
+          SizedBox(height: 20),
           //promo banner
           Container(
             decoration: BoxDecoration(
-              color: Color.fromARGB(255, 138, 60, 55),
-            ),
+                color: primaryColor, borderRadius: BorderRadius.circular(20)),
+            margin: const EdgeInsets.symmetric(horizontal: 25),
+            padding: const EdgeInsets.all(25),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   children: [
-                    const Text("Get 30%  Promo"),
+                    Text(
+                      "Get 30%  Promo",
+                      style: GoogleFonts.dmSerifDisplay(
+                          fontSize: 20, color: Colors.white),
+                    ),
+                    const SizedBox(height: 20),
                     MyButton(text: "Redeem", onTap: () {})
                   ],
-                )
+                ),
+                Image.asset("images/sushi.png", height: 100),
               ],
             ),
-          )
+          ),
+
           //search bar
 
           //menu list
