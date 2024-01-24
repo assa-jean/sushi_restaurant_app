@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sushi_restaurant_app/pages/intro_page.dart';
+import 'package:sushi_restaurant_app/pages/menu_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +16,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sushi Restaurant',
       home: IntroPage(),
+      routes: {
+        '/intropage': (context) => const IntroPage(),
+        '/menupage': (context) => const MenuPage(),
+      },
     );
   }
 }
