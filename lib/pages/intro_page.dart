@@ -24,7 +24,7 @@ class IntroPage extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 5),
+            SizedBox(height: 5),
 
             //icon
             Padding(
@@ -40,14 +40,14 @@ class IntroPage extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            const SizedBox(height: 15),
+            SizedBox(height: 15),
 
             //subtitle
             Text(
               "Feel the taste the most popular Japanese food from anywhere and anytime",
               style: TextStyle(color: Colors.grey[300], height: 2),
             ),
-            const SizedBox(height: 25),
+            SizedBox(height: 25),
 
             //get started button
             MyButton(

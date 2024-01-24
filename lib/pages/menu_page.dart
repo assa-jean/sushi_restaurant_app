@@ -33,9 +33,10 @@ class _MenuPageState extends State<MenuPage> {
             margin: const EdgeInsets.symmetric(horizontal: 25),
             padding: const EdgeInsets.all(25),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Get 30%  Promo",
@@ -50,11 +51,35 @@ class _MenuPageState extends State<MenuPage> {
               ],
             ),
           ),
+          SizedBox(height: 25),
 
           //search bar
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(20)),
+                focusedBorder: OutlineInputBorder(),
+              ),
+            ),
+          ),
 
+          const SizedBox(height: 20),
           //menu list
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Text(
+              "Food Menu",
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800]),
+            ),
+          ),
 
+          SizedBox(height: 10),
           //popular food
         ],
       ),

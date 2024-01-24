@@ -24,7 +24,7 @@ class MyButton extends StatelessWidget {
             ),
 
             //Icon
-            const Icon(
+            Icon(
               Icons.arrow_forward,
               color: Colors.white,
             ),
