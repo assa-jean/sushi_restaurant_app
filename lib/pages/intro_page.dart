@@ -31,7 +31,7 @@ class IntroPage extends StatelessWidget {
               padding: const EdgeInsets.all(50.0),
               child: Image.asset("images/sushi2.png"),
             ),
-
+            SizedBox(height: 25),
             //title
             Text(
               "THE TASTE OF JAPANESE FOOD",
@@ -40,14 +40,14 @@ class IntroPage extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 25),
 
             //subtitle
             Text(
               "Feel the taste the most popular Japanese food from anywhere and anytime",
               style: TextStyle(color: Colors.grey[300], height: 2),
             ),
-            SizedBox(height: 25),
+            SizedBox(height: 50),
 
             //get started button
             MyButton(
