@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sushi_restaurant_app/theme/colors.dart';
 
 import '../models/food.dart';
 
@@ -26,6 +27,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: ListView(
                 children: [
+                  const SizedBox(height: 10),
                   //image
                   Image.asset(
                     widget.food.imagePath,
@@ -73,7 +75,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    "Delicate sliced, fresh salmon drapes elegantly over a pillow of perfectly seasoned sushi rice.Delicate sliced, fresh salmon drapes elegantly over a pillow of perfectly seasoned sushi rice.Delicate sliced, fresh salmon drapes elegantly over a pillow of perfectly seasoned sushi rice.",
+                    "Delicate sliced, fresh salmon drapes elegantly over a pillow of perfectly seasoned sushi rice, Delicate sliced, fresh salmon drapes elegantly over a pillow of perfectly seasoned sushi rice.Delicate sliced, fresh salmon drapes elegantly over a pillow of perfectly seasoned sushi rice.Delicate sliced, fresh salmon drapes elegantly over a pillow of perfectly seasoned sushi rice.",
                     style: TextStyle(
                       color: Colors.grey[600],
                       fontSize: 14,
@@ -86,6 +88,26 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
           ),
 
           //price + qte + add to cart button
+          Container(
+            color: primaryColor,
+            padding: const EdgeInsets.all(25),
+            child: Column(
+              children: [
+                //price + quantity
+                Row(
+                  children: [
+                    Text(
+                      "\$" + widget.food.price,
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    )
+                  ],
+                )
+
+                //add to cart button
+              ],
+            ),
+          )
         ],
       ),
     );
