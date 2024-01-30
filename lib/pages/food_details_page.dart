@@ -13,6 +13,23 @@ class FoodDetailsPage extends StatefulWidget {
 }
 
 class _FoodDetailsPageState extends State<FoodDetailsPage> {
+  //qty
+  int quantityCount = 0;
+
+  //decrement
+  void decrementQuantity() {
+    setState(() {
+      quantityCount--;
+    });
+  }
+
+  //increment
+  void incrementQuantity() {
+    setState(() {
+      quantityCount++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,6 +117,27 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                       "\$" + widget.food.price,
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+
+                    //qte
+                    Row(
+                      children: [
+                        //qte minus button
+                        Container(
+                          decoration: BoxDecoration(
+                              color: secondaryColor, shape: BoxShape.circle),
+                          child: IconButton(
+                              icon: const Icon(
+                                Icons.remove,
+                                color: Colors.white,
+                              ),
+                              onPressed: decrementQuantity),
+                        )
+
+                        //qty count
+
+                        //plus button
+                      ],
                     )
                   ],
                 )
